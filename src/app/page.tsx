@@ -1,11 +1,16 @@
-import { Container } from "@/components/container";
-import HomePattern from "../components/home-pattern";
-import { Header } from "@/components/header";
+import About from "@/components/about";
+import Overview from "@/components/overview";
+import Stripes from "@/components/stripes";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <div>
-      I AM HAMMAD
-    </div>
+    <>
+      <Stripes />
+      <About />
+      <Separator />
+      <Overview />
+      <Separator />
+    </>
   );
 }

@@ -21,7 +21,7 @@ export default function HomePattern({ children }: Props) {
 
     return (
         <div
-            className={`min-h-screen w-full relative transition-colors duration-300 ${
+            className={`min-h-screen w-full relative transition-colors duration-300 overflow-hidden ${
                 isDark ? 'text-gray-100' : 'text-gray-800'
             }`}
             style={{
