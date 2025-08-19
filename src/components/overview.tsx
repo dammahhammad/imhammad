@@ -1,4 +1,3 @@
-// components/ProfileOverview.tsx
 "use client";
 
 import { Mail, Phone, Globe, MapPin, User, MessageSquareCode } from "lucide-react";
@@ -68,17 +67,18 @@ export default function Overview() {
                         </Link>
                     ) : (
                         <>
-                            <span>{value}</span>
-                            {label == "Role" && (
-                                <Link
-                                    href="https://www.volumetree.com" 
-                                    className="font-semibold hover:underline"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    Volumetree
-                                </Link>
-                            )}
+                            <span>{value}
+                                {label == "Role" && (
+                                    <Link
+                                        href="https://www.volumetree.com"
+                                        className="font-semibold hover:underline"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        Volumetree
+                                    </Link>
+                                )}
+                            </span>
                         </>
                     )}
                 </div>

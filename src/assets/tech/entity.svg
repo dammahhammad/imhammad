@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label=".NET Entity Framework">
+  <!-- Purple background -->
+  <rect width="400" height="400" fill="#512BD4"/>
+  
+  <!-- .NET Wordmark -->
+  <text x="20" y="140" fill="white"
+        font-family="Open Sans, sans-serif"
+        font-weight="bold"
+        font-size="128px">
+    .NET
+  </text>
+
+  <!-- EF Label -->
+  <text x="20" y="250" fill="white"
+        font-family="Open Sans, sans-serif"
+        font-size="68px">
+    Entity
+  </text>
+
+  <text x="20" y="350" fill="white"
+        font-family="Open Sans, sans-serif"
+        font-size="68px">
+    Framework
+  </text>
+</svg>
