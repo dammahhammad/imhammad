@@ -26,8 +26,8 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <HomePattern>
+            <Header />
             <Container>
-              <Header />
               {children}
             </Container>
           </HomePattern>

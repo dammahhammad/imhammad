@@ -9,7 +9,6 @@ import Experience from "@/components/experiences/experience";
 export default function Home() {
   return (
     <>
-      <Stripes />
       <Title />
       <Separator />
       <Overview />
