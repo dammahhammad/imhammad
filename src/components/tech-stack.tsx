@@ -12,17 +12,16 @@ export default function TechStack() {
     const isDark = theme === 'dark';
 
     return (
-        <div>
+        <div className='mt-8'>
             <h2 className="text-3xl font-bold font-mono border-y-1 border-zinc-300">Stack</h2>
-
             <div
                 className={cn(
-                    "[--pattern-foreground:var(--color-zinc-950)]/5 dark:[--pattern-foreground:var(--color-white)]/5",
+                    "[--pattern-foreground:var(--color-gray-950)]/12 dark:[--pattern-foreground:var(--color-white)]/12",
                     "bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center",
-                    "bg-zinc-950/0.75 dark:bg-white/0.75"
+                    "bg-zinc-950/0.75 dark:bg-white/0.75 pt-4 pb-8"
                 )}
             >
-                <ul className="flex flex-wrap gap-4 select-none my-4">
+                <ul className="flex flex-wrap gap-4 select-none">
                     {TECH_STACK.map((tech) => {
                         return (
                             <li key={tech.key} className="flex">

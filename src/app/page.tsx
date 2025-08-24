@@ -4,6 +4,7 @@ import Stripes from "@/components/stripes";
 import { Separator } from "@/components/ui/separator";
 import About from "@/components/about";
 import TechStack from "@/components/tech-stack";
+import Experience from "@/components/experiences/experience";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Overview />
       <About />
       <TechStack />
+      <Experience />
     </>
   );
 }
