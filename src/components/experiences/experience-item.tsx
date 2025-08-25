@@ -3,15 +3,17 @@ import { Position } from "../data/experience";
 import { ChevronsDownIcon, ChevronsDownUpIcon, ChevronsUpDownIcon, ChevronsUpIcon, Code, Tag } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { cn } from "@/lib/utils";
+import { Badge } from "../ui/badge";
+import { ExperienceDescription } from "./experience-description";
 
 export function ExperienceItem(position: Position) {
     return (
         <Collapsible defaultOpen={position.isExpanded} asChild>
-            <div className="relative last:before:absolute last:before:h-full last:before:w-4">
+            <div className="relative last:before:absolute last:before:h-full last:before:w-4 font-mono">
                 <CollapsibleTrigger
                     className={cn(
                         "group/experience block w-full text-left select-none",
-                        "relative before:absolute before:-top-1.5 before:-right-5 before:-bottom-1.5 before:left-10 before:-z-1 before:rounded-lg hover:before:bg-accent/15 hover:cursor-pointer"
+                        "relative before:absolute before:-top-1.5 before:-right-5 before:-bottom-1.5 before:left-10 before:-z-1 before:rounded-lg hover:before:bg-zinc-200/45 dark:hover:before:bg-zinc-200/15 hover:cursor-pointer"
                     )}
                 >
                     <div className="relative z-1 mb-1 flex items-center gap-6">
@@ -22,7 +24,7 @@ export function ExperienceItem(position: Position) {
                             <Code size={13} />
                         </div>
 
-                        <h4 className="flex-1 font-medium text-balance">
+                        <h4 className="flex-1 text-md text-balance">
                             {position.role}
                         </h4>
 
@@ -60,17 +62,14 @@ export function ExperienceItem(position: Position) {
                 </CollapsibleTrigger>
 
                 <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-                    {/* {position.skills && (
-                        <Prose className="pt-2 pl-9">
-                            <Markdown>{position.description}</Markdown>
-                        </Prose>
-                    )} */}
-
+                    <div className="pt-2 pl-18">
+                        <ExperienceDescription items={position.description} />
+                    </div>
                     {Array.isArray(position.skills) && position.skills.length > 0 && (
                         <ul className="flex flex-wrap gap-1.5 pt-2 pl-9">
                             {position.skills.map((skill, index) => (
                                 <li key={index} className="flex">
-                                    <Tag>{skill}</Tag>
+                                    <Badge>{skill}</Badge>
                                 </li>
                             ))}
                         </ul>
