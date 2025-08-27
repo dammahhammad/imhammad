@@ -1,8 +1,9 @@
 import Image from "next/image";
-import nagarro from "@/assets/logos/nagarro.jpg";
+import nagarro from "@/assets/logos/nagarro.png";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import cbse from "@/assets/logos/cbse.png"
 
 const awards = [
     {
@@ -20,7 +21,7 @@ const awards = [
     },
     {
         title: "Academics Exceptional Performance",
-        logo: nagarro,
+        logo: cbse,
         company: "C.B.S.E",
         receivedOn: "12.04.25",
         link: "https://drive.google.com/file/d/1EgsNd-tM3xxd8dT01tl1K74-tzb30qBs/view"
