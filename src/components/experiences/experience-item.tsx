@@ -1,6 +1,6 @@
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@radix-ui/react-collapsible";
 import { Position } from "../data/experience";
-import { ChevronsDownIcon, ChevronsDownUpIcon, ChevronsUpDownIcon, ChevronsUpIcon, Code, Tag } from "lucide-react";
+import { ChevronsDownIcon, ChevronsUpIcon, Code } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";

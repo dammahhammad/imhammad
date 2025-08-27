@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Globe, MapPin, User, MessageSquareCode } from "lucide-react";
+import { Mail, Phone, Globe, MapPin, MessageSquareCode } from "lucide-react";
 import Link from "next/link";
 
 type InfoItem = {

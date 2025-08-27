@@ -1,17 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 export default function Typewriter() {
-    const words = [
+    const words = useMemo(() => [
         'I solve problems',
         'A product developer',
         'A software engineer',
-    ];
+    ], []);
     const [text, setText] = useState('');
     const [wordIndex, setWordIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const [speed, setSpeed] = useState(120);
+    const [speed] = useState(120);
 
     useEffect(() => {
         const handleTyping = () => {
@@ -34,7 +34,7 @@ export default function Typewriter() {
 
         const timer = setTimeout(handleTyping, isDeleting ? speed / 2 : speed);
         return () => clearTimeout(timer);
-    }, [text, isDeleting, wordIndex]);
+    }, [text, isDeleting, wordIndex, speed, words]);
 
     return (
         <h1 className="text-sm font-mono dark:text-white">

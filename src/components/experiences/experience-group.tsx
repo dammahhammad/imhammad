@@ -34,8 +34,8 @@ const ExperienceGroup: React.FC<Props> = ({ companyExp }) => {
             </div>
 
             <div className="relative space-y-4 pl-4">
-                {companyExp.positions.map((exp: Position, index: any) => (
-                    <ExperienceItem {...exp} key={index} />
+                {companyExp.positions.map((exp: Position, index: number) => (
+                    <ExperienceItem key={`${exp.role}-${index}`} {...exp} />
                 ))}
             </div>
         </div>
