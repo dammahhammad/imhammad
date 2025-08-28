@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import HomePattern from "@/components/home-pattern";
 import { Container } from "@/components/container";
-import { Header } from "@/components/header";
+import { Header } from "@/components/header/header";
 import { ThemeProvider } from "@/lib/theme-context";
 import { fontMono, fontDoto } from "@/lib/fonts";
 
