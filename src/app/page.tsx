@@ -5,10 +5,12 @@ import About from "@/components/about";
 import TechStack from "@/components/tech-stack";
 import Experience from "@/components/experiences/experience";
 import { Honors } from "@/components/honors";
+import Footer from "@/components/footer";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function Home() {
   return (
-    <>
+    <ScrollArea>
       <Title />
       <Separator />
       <Overview />
@@ -16,6 +18,7 @@ export default function Home() {
       <TechStack />
       <Experience />
       <Honors />
-    </>
+      <Footer />
+    </ScrollArea>
   );
 }

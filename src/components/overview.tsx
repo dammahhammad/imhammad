@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Globe, MapPin, MessageSquareCode } from "lucide-react";
+import { Mail, Phone, Globe, MapPin, Code } from "lucide-react";
 import Link from "next/link";
 
 type InfoItem = {
@@ -12,9 +12,9 @@ type InfoItem = {
 
 const profileInfo: InfoItem[] = [
     {
-        icon: MessageSquareCode,
+        icon: Code,
         label: "Role",
-        value: "Software Development Engineer @",
+        value: "Building meaningful tech with passion @",
     },
     {
         icon: MapPin,

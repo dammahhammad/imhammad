@@ -29,15 +29,15 @@ export const Header = () => {
         <div className="fixed top-0 z-50 w-full">
             <div className="mx-auto max-w-4xl pt-2 px-1 sm:px-0">
                 <div 
-                    className={`transition-all duration-500 ease-out ${
+                    className={`transition-all duration-300 ${
                         isScrolled 
                             ? 'px-3 sm:px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-sm border' 
                             : 'px-4 py-2'
                     } ${
                         isScrolled && isDark 
-                            ? 'bg-black/70 border-white/20' 
+                            ? 'bg-black/50 border-white/20' 
                             : isScrolled && !isDark
-                            ? 'bg-white/70 border-black/20'
+                            ? 'bg-white/50 border-black/20'
                             : ''
                     }`}
                 >
@@ -60,7 +60,7 @@ export const Header = () => {
                                 </span>
                             </Link>
 
-                            <Link href="/">
+                            <Link href="/projects">
                                 <span className={`px-2 sm:px-4 py-2 text-sm sm:text-md font-mono text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 ${
                                     isScrolled ? 'hover:scale-105' : ''
                                 }`}>
@@ -69,28 +69,6 @@ export const Header = () => {
                             </Link>
 
                             <div className="flex items-center space-x-1 sm:space-x-3">
-                                <Link
-                                    href="https://github.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={`p-1 sm:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 ${
-                                        isScrolled ? 'hover:scale-110 hover:rotate-3' : ''
-                                    }`}
-                                    aria-label="GitHub"
-                                >
-                                    <Github size={20} />
-                                </Link>
-                                <Link
-                                    href="https://linkedin.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={`p-1 sm:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 ${
-                                        isScrolled ? 'hover:scale-110 hover:-rotate-3' : ''
-                                    }`}
-                                    aria-label="LinkedIn"
-                                >
-                                    <Linkedin size={20} />
-                                </Link>
                                 <Button
                                     onClick={toggleTheme}
                                     variant="ghost"

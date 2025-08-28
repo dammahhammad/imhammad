@@ -18,10 +18,10 @@ export default function TechStack() {
                 className={cn(
                     "[--pattern-foreground:var(--color-gray-950)]/12 dark:[--pattern-foreground:var(--color-white)]/12",
                     "bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center",
-                    "bg-zinc-950/0.75 dark:bg-white/0.75 pt-4 pb-8"
+                    "bg-zinc-950/0.75 dark:bg-white/0.75 pt-5 pb-12"
                 )}
             >
-                <ul className="flex flex-wrap gap-4 select-none">
+                <ul className="flex flex-wrap gap-6 select-none">
                     {TECH_STACK.map((tech) => {
                         return (
                             <li key={tech.key} className="flex">
@@ -36,8 +36,8 @@ export default function TechStack() {
                                             <Image
                                                 src={(tech.theme && isDark) ? tech.srcdark : tech.srclight || tech.src}
                                                 alt={`${tech.title} icon`}
-                                                width={32}
-                                                height={32}
+                                                width={33}
+                                                height={33}
                                                 unoptimized
                                             />
                                         </a>
