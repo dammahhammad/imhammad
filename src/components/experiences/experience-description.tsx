@@ -8,7 +8,7 @@ interface ExperienceDescriptionProps {
 
 export function ExperienceDescription({ items, className }: ExperienceDescriptionProps) {
 	return (
-		<ul className={cn("list-disc space-y-1 text-sm font-mono", className)}>
+		<ul className={cn("list-disc space-y-4 text-sm font-mono", className)}>
 			{items.map((item, index) => (
 				<li key={index} className="marker:text-muted-foreground">
 					{item}
