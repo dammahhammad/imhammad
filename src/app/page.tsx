@@ -10,7 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function Home() {
   return (
-    <ScrollArea>
+    <>
       <Title />
       <Separator />
       <Overview />
@@ -18,7 +18,6 @@ export default function Home() {
       <TechStack />
       <Experience />
       <Honors />
-      <Footer />
-    </ScrollArea>
+    </>
   );
 }

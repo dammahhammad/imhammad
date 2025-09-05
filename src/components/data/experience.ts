@@ -3,7 +3,6 @@ import tpt from "@/assets/logos/tpt.png";
 import nagarro from "@/assets/logos/nagarro.png";
 import { StaticImageData } from "next/image";
 
-
 export interface Position {
     role: string;
     type: string;

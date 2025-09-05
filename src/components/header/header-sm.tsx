@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/sheet';
 import { useTheme } from '@/lib/theme-context';
 import { useState } from 'react';
-import ContactForm from '@/components/contact';
+import ContactDialog from '@/components/forms/contact-dialog';
 
 export default function HeaderSM() {
     const { theme, toggleTheme } = useTheme();
@@ -74,7 +74,7 @@ export default function HeaderSM() {
                             variant="ghost"
                             className="w-full justify-start px-3 py-2 text-base font-mono font-medium tracking-wide hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
                         >
-                            <Link href="/">Blogs</Link>
+                            <Link href="/blogs">Blogs</Link>
                         </Button>
 
                         <Button
@@ -95,10 +95,7 @@ export default function HeaderSM() {
                 </SheetContent>
             </Sheet>
 
-            <ContactForm
-                isOpen={isContactOpen}
-                onOpenChange={setIsContactOpen}
-            />
+            <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
         </div>
     )
 }

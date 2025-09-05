@@ -6,7 +6,7 @@ import Stripes from "./stripes";
 
 export default function Footer() {
     return (
-        <footer className="mt-12">
+        <footer>
             <Stripes />
             <div className="flex flex-col sm:flex-row sm:justify-between gap-8 mx-auto px-6 text-sm">
                 <div>

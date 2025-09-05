@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import HeaderSM from './header-sm';
-import ContactForm from '@/components/contact';
+import ContactDialog from '@/components/forms/contact-dialog';
 
 export const Header = () => {
     const { theme, toggleTheme } = useTheme();
@@ -16,19 +16,33 @@ export const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            const shouldBeScrolled = scrollTop > 10;
-            setIsScrolled(shouldBeScrolled);
+            const scrollAreaViewport = document.querySelector('[data-radix-scroll-area-viewport]');
+            if (scrollAreaViewport) {
+                const scrollTop = scrollAreaViewport.scrollTop;
+                const shouldBeScrolled = scrollTop > 10;
+                setIsScrolled(shouldBeScrolled);
+            } else {
+                const scrollTop = window.scrollY;
+                const shouldBeScrolled = scrollTop > 10;
+                setIsScrolled(shouldBeScrolled);
+            }
         };
 
         handleScroll();
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        const scrollAreaViewport = document.querySelector('[data-radix-scroll-area-viewport]');
+        if (scrollAreaViewport) {
+            scrollAreaViewport.addEventListener('scroll', handleScroll, { passive: true });
+            return () => scrollAreaViewport.removeEventListener('scroll', handleScroll);
+        } else {
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            return () => window.removeEventListener('scroll', handleScroll);
+        }
     }, []);
 
     return (
         <div className="fixed top-0 z-50 w-full">
-            <div className="mx-auto max-w-4xl pt-2 px-1 sm:px-0">
+            <div className="mx-auto max-w-4xl pt-1 px-1 sm:px-0">
                 <div
                     className={`transition-all duration-300 ${isScrolled
                         ? 'px-3 sm:px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-sm border'
@@ -42,10 +56,7 @@ export const Header = () => {
                 >
                     <div className="flex items-center justify-between">
                         <Link href="/">
-                            <h1
-                                className={`text-4xl font-doto font-700 dark:text-white transition-all duration-300 hover:scale-105 ${isScrolled ? 'scale-110' : 'scale-100'
-                                    }`}
-                            >
+                            <h1 className={`text-4xl font-doto font-700 dark:text-white transition-all duration-300 hover:scale-105 ${isScrolled ? 'scale-110' : 'scale-100'}`}>
                                 MHK
                             </h1>
                         </Link>
@@ -66,7 +77,7 @@ export const Header = () => {
                                 className="px-4 py-2 font-mono text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 hover:scale-105"
                                 asChild
                             >
-                                <Link href="/">Blogs</Link>
+                                <Link href="/projects">Projects</Link>
                             </Button>
 
                             <Button
@@ -74,7 +85,7 @@ export const Header = () => {
                                 className="px-4 py-2 font-mono text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 hover:scale-105"
                                 asChild
                             >
-                                <Link href="/projects">Projects</Link>
+                                <Link href="/blogs">Blogs</Link>
                             </Button>
 
                             <Button
@@ -92,11 +103,7 @@ export const Header = () => {
                     </div>
                 </div>
             </div>
-
-            <ContactForm
-                isOpen={isContactOpen}
-                onOpenChange={setIsContactOpen}
-            />
+            <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
         </div>
     );
 };
