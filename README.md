@@ -149,9 +149,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 📞 Contact
 
 M. Hammad - [@dammahhammad](https://linkedin.com/in/dammahhammad) - dammahhammad9@gmail.com
-
-Project Link: [https://github.com/yourusername/imhammad](https://github.com/yourusername/imhammad)
-
 ---
 
 ⭐ Star this repository if you found it helpful!
