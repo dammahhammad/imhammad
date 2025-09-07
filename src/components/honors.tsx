@@ -10,21 +10,21 @@ const awards = [
         title: "Clash of TechTons",
         company: "Nagarro",
         logo: nagarro,
-        receivedOn: "12.04.25",
+        receivedOn: "27.07.23",
         link: "https://drive.google.com/file/d/1EgsNd-tM3xxd8dT01tl1K74-tzb30qBs/view"
     },
     {
         title: "Roblox Hackathon Runnerup",
         company: "Nagarro",
         logo: nagarro,
-        receivedOn: "12.04.25"
+        receivedOn: "16.06.23"
     },
     {
         title: "Academics Exceptional Performance",
         logo: cbse,
         company: "C.B.S.E",
-        receivedOn: "12.04.25",
-        link: "https://drive.google.com/file/d/1EgsNd-tM3xxd8dT01tl1K74-tzb30qBs/view"
+        receivedOn: "27.07.15",
+        link: "https://drive.google.com/file/d/1EC01qOiVvhzGF26W3gSZYC1D8ODafWRW/view"
     }
 ]
 
@@ -68,7 +68,7 @@ export function Honors() {
                                     <Link
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href={"https://drive.google.com/file/d/1EgsNd-tM3xxd8dT01tl1K74-tzb30qBs/view"}
+                                        href={award.link}
                                     >
                                         <ExternalLink size={14} />
                                     </Link>

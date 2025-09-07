@@ -23,7 +23,10 @@ export default function HeaderSM() {
     const handleDownloadResume = () => {
         // Add your resume download logic here
         // For example: window.open('/resume.pdf', '_blank');
-        console.log('Download resume');
+        setOpen(false);
+    };
+
+    const handleCloseSidebar = () => {
         setOpen(false);
     };
 
@@ -59,7 +62,10 @@ export default function HeaderSM() {
                     <SheetHeader className="flex items-center justify-between px-2 py-3 border-b dark:border-gray-800">
                         <SheetTitle className="font-doto text-2xl tracking-wide">MHK</SheetTitle>
                         <Button
-                            onClick={toggleTheme}
+                            onClick={() => {
+                                toggleTheme();
+                                handleCloseSidebar();
+                            }}
                             variant="ghost"
                             size="sm"
                             className="px-3 py-1 rounded-md transition-colors text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -73,6 +79,7 @@ export default function HeaderSM() {
                         <Button
                             variant="ghost"
                             className="w-full justify-start px-3 py-2 text-base font-mono font-medium tracking-wide hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                            onClick={handleCloseSidebar}
                         >
                             <Link href="/blogs">Blogs</Link>
                         </Button>
@@ -80,6 +87,7 @@ export default function HeaderSM() {
                         <Button
                             variant="ghost"
                             className="w-full justify-start px-3 py-2 text-base font-mono font-medium tracking-wide hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                            onClick={handleCloseSidebar}
                         >
                             <Link href="/projects">Projects</Link>
                         </Button>
