@@ -37,7 +37,7 @@ export default function ProjectItem(project: Project) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-1 sm:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 hover:scale-110 hover:-rotate-3"
-                                aria-label="LinkedIn"
+                                aria-label={project.title}
                             >
                                 <LinkIcon size={13} />
                             </Link>

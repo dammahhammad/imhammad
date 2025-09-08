@@ -20,14 +20,14 @@ export default function Footer() {
                     <ul className="space-y-1">
                         <li><Link href="/blogs" className="hover:underline">Blogs</Link></li>
                         <li><Link href="/projects" className="hover:underline">Projects</Link></li>
-                        <li><Link href="/resume" className="hover:underline">Resume</Link></li>
+                        {/* <li><Link href="/resume" className="hover:underline">Resume</Link></li> */}
                     </ul>
                 </div>
                 <div>
                     <h3 className="font-semibold mb-2">Connect</h3>
                     <div className="flex gap-6">
                         <Link
-                            href="https://linkedin.com/dammahhammad"
+                            href="https://www.linkedin.com/in/dammahhammad/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-1 sm:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300 rounded-lg hover:bg-gray-100/50 dark:hover:bg-gray-800/50 hover:scale-110 hover:-rotate-3"

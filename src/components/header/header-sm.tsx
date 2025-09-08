@@ -92,13 +92,13 @@ export default function HeaderSM() {
                             <Link href="/projects">Projects</Link>
                         </Button>
 
-                        <Button
+                        {/* <Button
                             variant="ghost"
                             className="w-full justify-start px-3 py-2 text-base font-mono font-medium tracking-wide hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
                             onClick={handleDownloadResume}
                         >
                             Resume
-                        </Button>
+                        </Button> */}
                     </div>
                 </SheetContent>
             </Sheet>
